@@ -17,7 +17,7 @@ Este repositório contém uma implementação do algoritmo **Perceptron** desenv
 o modelo calcula uma combinação linear dos atributos como  $u = w^T \cdot X^{(k)} - \theta,$ onde $w = [w_1, w_2, \dots, w_n]$ representa o vetor de pesos associados a cada entrada $x_i$, e $\theta$ é o bias associado ao modelo.
 
 * De forma geral, para facilitar o algoritmo e evitar um loop extra,
-podemos implementar ao vetor de entrada uma entrada adicional fixa $x_0 = -1$, de forma que o bias possa ser adicionado ao vetor de pesos como $w_0 = \theta$. Assim, o potencial de ativação toma a seguinte forma $u = w^T \cdot X^{(k)}$, onde $w = [w_0, w_1, \dots, w_n]$ e $X^{(k)} = [x_0^{(k)}, x_1^{(k)}, \dots, x_n^{(k)}]$.
+podemos implementar ao vetor de entrada uma entrada adicional fixa $x_0 = 1$, de forma que o bias possa ser adicionado ao vetor de pesos como $w_0 = \theta$. Assim, o potencial de ativação toma a seguinte forma $u = w^T \cdot X^{(k)}$, onde $w = [w_0, w_1, \dots, w_n]$ e $X^{(k)} = [x_0^{(k)}, x_1^{(k)}, \dots, x_n^{(k)}]$.
 
 * Por fim, a saída do modelo é obtida por meio da função de ativação sinal: $y = g(u) = +1, u \geq 0$ ou $ y = g(u) = -1, u < 0$
 
